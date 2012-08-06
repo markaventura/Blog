@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<table border="1">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td bgcolor="#FF0000">January</td>
+    <td bgcolor="#00FF00">$100</td>
+  </tr>
+</table>
+<table bgcolor="#000000">
+	<tr>
+		<td bgcolor="#000000">
+			<% flash.each do |key, value| %>
+			<p><%= value %></p>
+			<% end %>
+		</td>
+	</tr>
+</table>
+
+<%= yield %>
+
+</body>
+</html>
